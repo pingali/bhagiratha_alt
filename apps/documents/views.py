@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import DocumentForm
 from .models import Document
+from bhagirath.apps.microtasks.models import Microtask 
 import simplejson as json
 import logging
 import traceback 
@@ -34,12 +35,13 @@ def show(request, doc_id):
     print "document_show" 
     user = request.user 
     try: 
-        doc = Document.objects.get(user=user, id=doc_id)
+        doc = Document.objects.get(pk=doc_id)
     except: 
         messages.error(request, "Document does not exist")
         return HttpResponseRedirect("/documents") 
-        
-    template = {"doc": doc}
+
+    mtasks = Microtask.objects.filter(document=doc) 
+    template = {"doc": doc, "mtasks": mtasks}
     return render_to_response(
         'documents/show.html', 
         template, 
@@ -50,7 +52,7 @@ def edit(request, doc_id):
     
     user = request.user 
     try: 
-        instance=Document.objects.get(user=request.user, id=doc_id)
+        instance=Document.objects.get(pk=doc_id)
     except: 
         messages.error(request, "Document does not exist")
         return HttpResponseRedirect("/documents") 
@@ -93,3 +95,40 @@ def delete(request, doc_id):
     d = Document.objects.get(pk=doc_id)
     d.delete() 
     return HttpResponseRedirect("/documents/")     
+
+def assign_roundrobin(request, doc_id):
+    # Assign to all users in roundrobin fashion 
+    try:
+        d = Document.objects.get(pk=doc_id)
+    except: 
+        messages.error(request, "Could not find the document specified") 
+        return 
+
+    text = d.body 
+    snippets = d.body.split(".")
+    users = User.objects.all() 
+    max_num = len(users)
+    user_num = 0 
+    for snippet in snippets: 
+        m = Microtask(snippet=snippet,
+                      document=d, 
+                      user=users[user_num],
+                      translation="",
+                      context=""
+                      )
+        m.save() 
+        user_num += 1 
+        if max_num <= user_num: 
+            user_num = 0 
+    
+
+@login_required
+def assign(request, doc_id):
+    try: 
+        assign_roundrobin(request, doc_id) 
+    except: 
+        log.exception("Found some error!") 
+        messages.error(request, "Found some error!") 
+        pass 
+
+    return HttpResponseRedirect("/documents/show/%d" % int(doc_id))

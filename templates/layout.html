@@ -15,13 +15,13 @@
 	<ul id="header">
 		{% if request.user.is_authenticated %}
 		<li><a href="/account/logout">Logout</a></li>
+		<li><a href="/microtasks">Microtasks</a></li>
 		<li><a href="/documents">Documents</a></li>
 		{% else %} 
 		<li><a href="/account/login">Login</a></li>
 		<li><a href="/account/signup">Signup</a></li>
 		{% endif %} 
 		<li><a href="/">Home</a></li>
-		<li><a href="http://bhagirath.com">Bhagirath</a></li>
 		{% if request.user.is_authenticated %}
 		<li>Welcome {{ request.user.username }}! </li>
 		{% endif %} 

@@ -72,6 +72,7 @@ table.data {
 	font-size:12px;
 	margin:0 0 15px 0;
 	color:#333333;
+	border: 1px solid;
 }
 table.data th, table.data td {
 	padding:10px;

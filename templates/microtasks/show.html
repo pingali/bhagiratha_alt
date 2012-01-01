@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Microtask Information</h1>
+
+<div class="content_container">
+  {% if mtask != None %}
+  <p style="float:right;">
+    <a href="/microtasks/edit/{{mtask.id}}">Edit</a>
+    <a href="/microtasks/">All Microtasks</a>
+  </p>
+  <table class="data">
+    <tr>
+      <td>Id</td>
+      <td>{{mtask.id}}</td>
+    </tr>
+    <tr>
+      <td>Timestamps</td>
+      <td>Created: {{mtask.created_at|timesince}} ago<br>
+          Modified: {{mtask.updated_at|timesince}} ago</td>
+    </tr> 
+    <tr>
+      <td>Snippet</td>
+      <td>{{mtask.snippet}}</td>
+    </tr> 
+    <tr>
+      <td>Owner</td>
+      <td>{{mtask.user.username}} [#{{mtask.user.id}}] </td>
+    </tr>
+    <tr>
+      <td>Translation</td>
+      <td>{{mtask.translation}}</td>
+    </tr>
+    <tr> 
+      <td>Context</td>
+      <td>{{mtask.context}}</td>
+    </tr>
+  </table>
+  {% endif %} 
+</div>
+
+{% endblock %}

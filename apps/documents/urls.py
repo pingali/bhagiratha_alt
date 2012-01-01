@@ -7,4 +7,5 @@ urlpatterns = patterns('bhagirath.apps.documents.views',
        (r'^show/(?P<doc_id>\d+)/?$',    'show'),
        (r'^edit/(?P<doc_id>\d+)/?$',    'edit'),
        (r'^delete/(?P<doc_id>\d+)/?$',  'delete'),
+       (r'^assign/(?P<doc_id>\d+)/?$',  'assign'),
 )

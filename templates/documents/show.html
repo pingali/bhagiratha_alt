@@ -23,6 +23,19 @@
 	    <td>Text</td>
 	    <td>{{doc.body|wordwrap:50}}</td>
 	  </tr>
+	  <tr>
+	    <td>Microtasks</td>
+	    <td>
+	      <span style="float:left; width: 30px;padding-right: 5px;">Id</span>
+	      <span style="float:left; width: 30px; padding-right: 10px;">Owner</span>
+	      <span style="float:left;">Snippet</span><br>
+	      {% for m in mtasks %} 
+	      <span style="float:left; width: 30px;padding-right: 5px;">{{m.id}}</span>
+	      <span style="float:left; width: 30px; padding-right: 10px;">{{m.user.username}}</span>
+	      <span style="float:left;"><a href="/microtasks/show/{{m.id}}">{{m.snippet|slice:"50"}}</a></span><br>
+	      {% endfor %} 
+	    </td>
+	  </tr>
 	</table>
 	{% endif %} 
 </div>

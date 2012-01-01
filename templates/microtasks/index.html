@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %} Documents {% endblock %}
+
+{% block content %}
+
+<h1>Microtask</h1>
+
+<div class="content_container">
+
+  <table width="100%" border="1px" class="data"> 
+    <!-- 
+    <tr> 
+      <th colspan="4"> 
+	<p style="float:right;">
+	  <a href="/documents/new">New Document</a>
+	</p>
+      </th> 
+    </tr> 
+    --> 
+    <tr> 
+      <th>Id</th> 
+      <th>Task</th> 
+      <th>Assignee</th> 
+      <th>Text</th> 
+    </tr> 
+  {% for m in mtasks %} 
+    <tr> 
+      <td> {{m.id}} </td>
+      <td> 
+	<a href="/microtasks/show/{{m.id}}">Show</a>
+	<a href="/microtasks/edit/{{m.id}}">Edit</a>
+      </td> 
+      <td> {{m.user.username}}<br>
+      [#{{m.user.id}}]</td>
+      <td> 
+	Text: {{m.snippet}}<br>
+	Translation: {{m.translation}}
+      </td>
+    </tr>
+  {% endfor %}
+  </table> 
+</div>
+
+
+
+{% endblock %}

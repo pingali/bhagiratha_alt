@@ -147,5 +147,6 @@ INSTALLED_APPS = (
     'bhagirath.apps.base',
     'bhagirath.apps.account',
     'bhagirath.apps.documents',
+    'bhagirath.apps.microtasks',
     'south',
     )
