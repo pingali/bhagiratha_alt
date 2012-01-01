@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% load uni_form_tags %}
+{% load accounttags %} 
+
+{% block title %}{{request.user.username}}{% endblock %}
+
+{% block content %}
+
+<h1>Sharing Preferences </h1>
+<div class="form_container">
+  Please specify which of your attributes can be shared through secure
+  information sharing mechanisms with providers such as LPG service
+  providers, banks etc. Your information will be shared only upon
+  receiving your approval for each provider. 
+
+  {% uni_form form form.helper %}
+</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('form.uniForm').uniform();
+		});
+	</script>
+
+{% endblock %}

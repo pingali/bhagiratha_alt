@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Document Information</h1>
+
+<div class="content_container">
+	{% if doc != None %}
+	<p style="float:right;">
+	  <a href="/documents/edit/{{doc.id}}">Edit</a>
+	  <a href="/documents/">Back</a>
+	</p>
+	<table class="data">
+	  <tr>
+	    <td>Id</td>
+	    <td>{{doc.id}}</td>
+	  </tr>
+	  <tr>
+	    <td>Source</td>
+	    <td><a href="{{doc.url}}">{{doc.url}}</a></td>
+	  </tr>
+	  <tr>
+	    <td>Text</td>
+	    <td>{{doc.body|wordwrap:50}}</td>
+	  </tr>
+	</table>
+	{% endif %} 
+</div>
+
+
+
+{% endblock %}
