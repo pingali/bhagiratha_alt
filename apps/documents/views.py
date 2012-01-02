@@ -123,6 +123,24 @@ def assign_roundrobin(request, doc_id):
     
 
 @login_required
+def unassign(request, doc_id):
+    try: 
+        d = Document.objects.get(pk=doc_id)
+    except: 
+        messages.error(request, "Could not find the document specified") 
+        return HttpResponseRedirect("/documents/")
+    
+    try: 
+        Microtask.objects.filter(document=d).delete()
+    except: 
+        log.exception("Found some error!") 
+        messages.error(request, "Unable to assign. " + 
+                       "Please contact administrator!") 
+        pass 
+
+    return HttpResponseRedirect("/documents/show/%d" % int(doc_id))
+
+@login_required
 def assign(request, doc_id):
     try: 
         assign_roundrobin(request, doc_id) 

@@ -32,6 +32,7 @@
 	<a href="/documents/edit/{{d.id}}">Edit</a>
 	<a href="/documents/delete/{{d.id}}">Delete</a>
 	<a href="/documents/assign/{{d.id}}">Assign</a>
+	<a href="/documents/unassign/{{d.id}}">Unassign</a>
       </td> 
       <td> 
 	{% if d.url|length != 0 %} 
@@ -44,6 +45,7 @@
     </tr>
   {% endfor %}
   </table> 
+  <p/>
 </div>
 
 

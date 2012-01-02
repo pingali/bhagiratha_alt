@@ -11,6 +11,8 @@ SECRET_KEY = '=hf03e+08xlolbb$!-s01m-n_4xn*5mdsd!pm@$+ms!pe08f-7'
 
 # Find local ip address
 def get_host_type(): 
+    
+    return "development" 
 
     # use whatever complicated logic
     addresses = [i['addr'] for i in ifaddresses('eth0').setdefault(AF_INET, [{'addr':'No IP addr'}] )]

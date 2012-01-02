@@ -5,4 +5,7 @@ urlpatterns = patterns('bhagirath.apps.microtasks.views',
        (r'^$',    'index'),
        (r'^show/(?P<mtask_id>\d+)/?$',    'show'),
        (r'^edit/(?P<mtask_id>\d+)/?$',    'edit'),
+       (r'^assign/(?P<mtask_id>\d+)/?$',  'assign'),
+       (r'^reassign/(?P<mtask_id>\d+)/?$',  'reassign')
+
 )
