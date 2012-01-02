@@ -1,0 +1,309 @@
+[
+    { 
+	"model": "translations.language", 
+	"pk": "1", 
+	"fields": { 
+	    "language":  "Assamese", 
+	    "region": "official language of Assam " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "2", 
+	"fields": { 
+	    "language":  "Bengali", 
+	    "region": "official language of Tripura and West Bengal"
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "3", 
+	"fields": { 
+	    "language":  "Bodo", 
+	    "region": "official language of Assam "
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "4", 
+	"fields": { 
+	    "language":  "Dogri", 
+	    "region": "official  language of Jammu and Kashmir " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "5", 
+	"fields": { 
+	    "language":  "Gujarati", 
+	    "region": "official language of Dadra and Nagar Haveli, Daman and Diu and Gujarat " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "6", 
+	"fields": { 
+	    "language":  "Hindi", 
+	    "region": "official language of Arunachal Pradesh, Andaman and Nicobar Islands,  Bihar, Chandigarh,  Chhattisgarh, Delhi,  Haryana,  Himachal Pradesh, Jharkhand, Madhya Pradesh, Rajasthan Uttar Pradesh and Uttaranchal " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "7", 
+	"fields": { 
+	    "language":  "Kannada", 
+	    "region": "official  language of Karnataka " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "8", 
+	"fields": { 
+	    "language":  "Kashmiri", 
+	    "region": "official  language of Jammu and Kashmir " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "9", 
+	"fields": { 
+	    "language":  "Konkani", 
+	    "region": "official  language of Goa and Mangalore " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "10", 
+	"fields": { 
+	    "language":  "Malayalam", 
+	    "region": "official language of Kerala and Lakshadweep " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "11", 
+	"fields": { 
+	    "language":  "Manipuri or Meithei", 
+	    "region": "official   language of Manipur " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "12", 
+	"fields": { 
+	    "language":  "Marathi", 
+	    "region": "official   language of Maharashtra " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "13", 
+	"fields": { 
+	    "language":  "Nepali", 
+	    "region": "official   language of Sikkim " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "14", 
+	"fields": { 
+	    "language":  "Oriya", 
+	    "region": "official   language of Orissa " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "15", 
+	"fields": { 
+	    "language":  "Punjabi", 
+	    "region": "official   language of Punjab and Chandigarh, second official language of Delhi and Haryana " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "16", 
+	"fields": { 
+	    "language":  "Sanskrit", 
+	    "region": "All india. language of Hinduism required teaching in many schools " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "17", 
+	"fields": { 
+	    "language":  "Santali",
+	    "region": "language of the Santhal tribals of the Chota Nagpur Plateau (comprising the states of Jharkhand, Bihar, Orissa and Chattisgarh) " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "18", 
+	"fields": { 
+	    "language":  "Sindhi",
+	    "region": "language of the Sindhi community. Mainly Gujarat " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "19", 
+	"fields": { 
+	    "language":  "Tamil", 
+	    "region": "official   language of Tamil Nadu and Pondicherry " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "20", 
+	"fields": { 
+	    "language":  "Telugu", 
+	    "region": "official   language of Andhra Pradesh " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "21", 
+	"fields": { 
+	    "language":  "Urdu", 
+	    "region": "official language of Jammu and Kashmir, Andhra Pradesh, Delhi and Uttar Pradesh " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "22", 
+	"fields": { 
+	    "language":  "Kokborok",
+	    "region": "official language of Tripura " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "23", 
+	"fields": { 
+	    "language":  "Mizo", 
+	    "region": "official language of Mizoram "
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "24", 
+	"fields": { 
+	    "language":  "Khasi",
+	    "region": "official language of Meghalaya " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "25", 
+	"fields": { 
+	    "language":  "Garo",
+	    "region": "official language of Meghalaya " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "26", 
+	"fields": { 
+	    "language":  "Angika", 
+	    "region": "language of Bihar, Spoken largely in the Northern and Southern part of Bihar, Major part of Jharkhand and Maldah district of West Bengal " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "27", 
+	"fields": { 
+	    "language":  "Bhojpuri", 
+	    "region": "language of Bihar"
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "28", 
+	"fields": { 
+	    "language":  "Magadhi", 
+	    "region": "language of southern Bihar"
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "29", 
+	"fields": { 
+	    "language":  "Marwari", 
+	    "region": "language of Marwar. The region including Jodhpur, Nagour and Bikaner"
+	}
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "30", 
+	"fields": { 
+	    "language":  "Mewari", 
+	    "region":  "language of Mewar. The region including Udaipur, Chittor and Kota-Bundi" 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "31", 
+	"fields": { 
+	    "language":  "Shekhavati", 
+	    "region":  "language of Shekhavati. The region includes Sikar, Churufields, Jhunjhunu"
+	}
+    },
+
+    { 
+	"model": "translations.language", 
+	"pk": "32", 
+	"fields": { 
+	    "language":  "Bhili",
+	    "region": "Bhil tribals" 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "33", 
+	"fields": { 
+	    "language":  "Gondi",
+	    "region": "Gond tribals" 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "34", 
+	"fields": { 
+	    "language":  "Kodava",
+	    "region": "spoken in the Kodagu district of Karnataka " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "35", 
+	"fields": { 
+	    "language":  "Kutchi", 
+	    "region": "language of Kutch  a region in Gujarat " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "36", 
+	"fields": { 
+	    "language":  "Tulu", 
+	    "region": "spoken by Tulu people of Karnataka and Kerala " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "37", 
+	"fields": { 
+	    "language":  "Sankethi", 
+	    "region":  "spoken by Sankethi people in Karnataka, Tamil Nadu and Kerala " 
+	} 
+    },
+    { 
+	"model": "translations.language", 
+	"pk": "38", 
+	"fields": { 
+	    "language":  "Mahl", 
+	    "region": "language of Minicoy. spoken in the island of Minicoy"
+	}
+    }
+
+
+]

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Translation Information</h1>
+
+<div class="content_container">
+  {% if translation != None %}
+  <p style="float:right;">
+    <a href="/translations/edit/{{translation.id}}">Edit</a>
+    <a href="/translations/">All Translations</a>
+  </p>
+  <table class="data">
+    <tr>
+      <td>Id</td>
+      <td>{{translation.id}}</td>
+    </tr>
+    <tr>
+      <td>Timestamps</td>
+      <td>Created: {{translation.created_at|timesince}} ago<br>
+          Modified: {{translation.updated_at|timesince}} ago</td>
+    </tr> 
+    <!-- 
+    <tr>
+      <td>Snippet</td>
+      <td>{{translation.snippet}}</td>
+    </tr> 
+    <tr>
+      <td>Owner</td>
+      <td>{{translation.user.username}} [#{{translation.user.id}}] </td>
+    </tr>
+    <tr>
+      <td>Translation</td>
+      <td>{{translation.translation}}</td>
+    </tr>
+    <tr> 
+      <td>Context</td>
+      <td>{{translation.context}}</td>
+    </tr>
+    --> 
+  </table>
+  {% endif %} 
+</div>
+
+{% endblock %}

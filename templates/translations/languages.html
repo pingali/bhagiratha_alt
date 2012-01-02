@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %} Languages {% endblock %}
+
+{% block content %}
+
+<h1>Languages</h1>
+
+<div class="content_container">
+
+  <table width="100%" border="1px" class="data"> 
+
+    <tr> 
+      <th>Id</th> 
+      <th>Language Name</th> 
+      <th>Region</th> 
+    </tr> 
+  {% for l in languages %} 
+    <tr> 
+      <td> {{l.id}} </td> 
+      <td> {{l.language}} </td>
+      <td> {{l.region}} </td>
+    </tr>
+  {% endfor %}
+  </table> 
+</div>
+
+
+
+{% endblock %}

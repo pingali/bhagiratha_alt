@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %} Translation {% endblock %}
+
+{% block content %}
+
+<h1>Translation</h1>
+
+<div class="content_container">
+
+  <table width="100%" border="1px" class="data"> 
+
+    <tr> 
+      <th colspan="10"> 
+	<p style="float:right;">
+	  <a href="/translations/languages">Languages</a>
+	</p>
+      </th> 
+    </tr> 
+
+    <tr> 
+      <th>Actions</th> 
+      <th>Id</th> 
+      <th>MTask Id</th> 
+      <th>Assignee</th> 
+      <th>Iteration</th> 
+      <th>Status</th> 
+      <th>Creation Time</th> 
+      <th>Last Update</th> 
+    </tr> 
+  {% for t in translations %} 
+    <tr> 
+      <td> 
+	<a href="/translations/show/{{t.id}}">Show</a>
+	<a href="/translations/edit/{{t.id}}">Edit</a>
+      </td> 
+      <td> {{t.id}} </td>
+      <td>
+      	<a href="/microtasks/show/{{t.microtask.id}}">Mtask {{t.microtask.id}}</a>
+
+      <td> {{t.user.username}}<br>
+      [#{{t.user.id}}]</td>
+      <td> {{t.iteration}} </td>
+      <td> {{t.status}} </td>
+      <td> {{t.created_at|timesince}} ago </td>
+      <td> {{t.updated_at|timesince}} ago </td>
+    </tr>
+  {% endfor %}
+  </table> 
+  <p/>
+</div>
+
+
+
+{% endblock %}

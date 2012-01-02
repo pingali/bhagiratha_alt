@@ -87,13 +87,12 @@ def edit(request, mtask_id):
 @login_required
 def reassign(request, mtask_id):
     try: 
-        d = Microtask.objects.get(pk=mtask_id)
+        mtask = Microtask.objects.get(pk=mtask_id)
     except: 
         messages.error(request, "Could not find the Snippet specified") 
         return HttpResponseRedirect("/microtasks/")
     
     try: 
-        mtask = Microtask.objects.filter(pk=mtask_id)
         users = User.objects.all() 
         max_num = len(users)
         user = users[random.randint(0, max_num-1)]
@@ -107,13 +106,3 @@ def reassign(request, mtask_id):
 
     return HttpResponseRedirect("/microtasks/show/%d" % int(mtask_id))
 
-@login_required
-def assign(request, doc_id):
-    try: 
-        assign_roundrobin(request, doc_id) 
-    except: 
-        log.exception("Found some error!") 
-        messages.error(request, "Found some error!") 
-        pass 
-
-    return HttpResponseRedirect("/documents/show/%d" % int(doc_id))

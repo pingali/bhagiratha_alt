@@ -29,13 +29,17 @@
       <td>Owner</td>
       <td>{{mtask.user.username}} [#{{mtask.user.id}}] </td>
     </tr>
-    <tr>
-      <td>Translation</td>
-      <td>{{mtask.translation}}</td>
-    </tr>
     <tr> 
       <td>Context</td>
       <td>{{mtask.context}}</td>
+    </tr>
+    <tr>
+      <td>Translation Status</td>
+      <td>
+	{% for t in mtask.translations %} 
+	{{t.language.language}} <a href="/translations/show/{{t.id}}">Translation Task {{t.id}} </a> [ status = {{t.status}},  last update = {{t.updated_at|timesince}} user = {{t.user.username}}]</a><br/>
+	{% endfor %} 
+      </td>
     </tr>
   </table>
   {% endif %} 

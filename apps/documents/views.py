@@ -10,6 +10,7 @@ from django.contrib import messages
 from .forms import DocumentForm
 from .models import Document
 from bhagirath.apps.microtasks.models import Microtask 
+from bhagirath.apps.translations.models import Language, Translation
 import simplejson as json
 import logging
 import traceback 
@@ -117,6 +118,14 @@ def assign_roundrobin(request, doc_id):
                       context=""
                       )
         m.save() 
+
+        # Now create a translation object
+        t = Translation(microtask=m, 
+                        language=Language.hindi(),
+                        user=users[user_num],
+                        document=d)
+        t.save() 
+                        
         user_num += 1 
         if max_num <= user_num: 
             user_num = 0 

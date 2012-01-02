@@ -8,9 +8,9 @@
 
 <div class="content_container">
 
-  <table width="100%" border="1px"> 
+  <table width="100%" border="1px" class="data"> 
     <tr> 
-      <th colspan="4"> 
+      <th colspan="10"> 
 	<p style="float:right;">
 	  <a href="/documents/new">New Document</a>
 	</p>
@@ -18,15 +18,15 @@
     </tr> 
     <tr> 
       <th>Id</th> 
+      <th>Owner</th> 
       <th>Ops</th> 
       <th>URL</th> 
       <th>Text</th> 
     </tr> 
   {% for d in docs %} 
     <tr> 
-      <td> 
-	{{d.id}}
-      </td>
+      <td> {{d.id}} </td>
+      <td> {{d.user.username}} </td>
       <td> 
 	<a href="/documents/show/{{d.id}}">Show</a>
 	<a href="/documents/edit/{{d.id}}">Edit</a>

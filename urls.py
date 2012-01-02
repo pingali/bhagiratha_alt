@@ -6,5 +6,6 @@ urlpatterns = patterns('',
     (r'^account/', include('bhagirath.apps.account.urls')),
     (r'^documents/', include('bhagirath.apps.documents.urls')),
     (r'^microtasks/', include('bhagirath.apps.microtasks.urls')),
+    (r'^translations/', include('bhagirath.apps.translations.urls')),
     ('^/?$', include('bhagirath.apps.base.urls')),
 )

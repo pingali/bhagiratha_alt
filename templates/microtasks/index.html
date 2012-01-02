@@ -35,8 +35,11 @@
       <td> {{m.user.username}}<br>
       [#{{m.user.id}}]</td>
       <td> 
-	Text: {{m.snippet}}<br>
-	Translation: {{m.translation}}
+	Text: <br>{{m.snippet}}<br/>
+	Translation Status: <br>
+	{% for t in m.translations %} 
+	{{t.language.language}} <a href="/translations/show/{{t.id}}">Translation Task {{t.id}}</a> [ status = {{t.status}},  last update = {{t.updated_at|timesince}} ago, user = t.user.username ]</a>
+	{% endfor %} 
       </td>
     </tr>
   {% endfor %}
