@@ -114,7 +114,7 @@ def assign_roundrobin(request, doc_id):
         m = Microtask(snippet=snippet,
                       document=d, 
                       user=users[user_num],
-                      translation="",
+                      #translation="",
                       context=""
                       )
         m.save() 

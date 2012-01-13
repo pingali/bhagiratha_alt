@@ -20,10 +20,9 @@
       <td>Created: {{translation.created_at|timesince}} ago<br>
           Modified: {{translation.updated_at|timesince}} ago</td>
     </tr> 
-    <!-- 
     <tr>
       <td>Snippet</td>
-      <td>{{translation.snippet}}</td>
+      <td>{{translation.microtask.snippet}}</td>
     </tr> 
     <tr>
       <td>Owner</td>
@@ -37,9 +36,9 @@
       <td>Context</td>
       <td>{{translation.context}}</td>
     </tr>
-    --> 
   </table>
   {% endif %} 
+  <p/>
 </div>
 
 {% endblock %}
